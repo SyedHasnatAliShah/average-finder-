@@ -1,0 +1,22 @@
+if __name__ == '__main__':
+    n = int(raw_input())
+    student_marks = {}
+    for _ in range(n):
+        line = raw_input().split()
+        name, scores = line[0], line[1:]
+        scores = map(float, scores)
+        student_marks[name] = scores
+    query_name = raw_input()
+
+    a=0
+    lst=[]
+    for key, value in student_marks.items():
+        if key==query_name:
+            lst.append(value)
+    
+    for w in lst:
+        for d in w:
+            a+=d
+   
+    print "{0:.2f}".format(1.00*(a/len(w)))
+
